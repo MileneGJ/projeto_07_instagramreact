@@ -11,7 +11,7 @@ export default function Header (){
             <div className="topo">
                 <div>
                     <ion-icon name="logo-instagram"></ion-icon>
-                    <img src="./images/logo.png" />
+                    <img src="./images/logo.png" alt="" />
                 </div>
             
                 <input className="pesquisar" placeholder="Pesquisar" />
@@ -23,7 +23,7 @@ export default function Header (){
 
             <div className="topo-mobile">
                     <ion-icon name="logo-instagram"></ion-icon>
-                    <img src="./images/logo.png" />
+                    <img src="./images/logo.png" alt="" />
                     <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
         </div>

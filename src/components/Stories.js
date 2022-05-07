@@ -26,16 +26,26 @@ const profiles = [{
     }
 ]
 
+    function Story (props) {
+        return(
+            <div>
+            <div className="molde-foto">
+                <img src="./images/stories_background.jpg" alt=""/>
+                <div className="foto-interior">
+                    <img src={props.image} alt="" />
+                </div>
+            </div>
+            <h2>{props.name}</h2>
+        </div>
+        );
+    }
+
     return (
         <div className="stories horizontal">
-            {profiles.map(profile =>
-                <div>
-                    <div className="molde-foto">
-                        <img src="./images/stories_background.jpg"/>
-                        <div className="foto-interior"><img src={profile.link} /></div>
-                    </div>
-                    <h2>{profile.name}</h2>
-                </div>)}
+            {profiles.map(profile => <Story
+                image={profile.image}
+                name={profile.name} />
+                )}
                 <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
     );

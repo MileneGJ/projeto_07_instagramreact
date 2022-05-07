@@ -12,7 +12,7 @@ export default function Sidebar () {
         profName:"razoesparaacreditar",
         status:"Novo no Instagram"
     },{
-        profImage:"./images/adorableanimals 1.png",
+        profImage:"./images/adorableanimals 2.png",
         profName:"adorable_animals",
         status:"Segue você"
     },{
@@ -21,32 +21,50 @@ export default function Sidebar () {
         status:"Segue você"
     }]
 
+    function SugFollowers (props) {
+        return(
+        <div className="contas barra horizontal">
+        <div>
+            <img src={props.profImage} alt="" />
+            <div className="coluna">
+                <h1>{props.profName}</h1>
+                <h2 className="claro">{props.status}</h2>
+            </div>
+        </div>
+        <h3 className="bold">Seguir</h3>
+    </div>
+        );
+    }
+
+    function UserProfile (props){
+        return(
+        <div className="perfil horizontal">
+            <img src={props.profImage} alt="" />
+            <div className="coluna">
+                <h1>{props.profName}</h1>
+                <h2 className="claro maior">{props.userName}</h2>
+            </div>
+        </div>
+        );
+    }
+    
     return (
         <div>
             <div className="sidebar-frame"></div>    
             <div className="sidebar">
-                <div className="perfil horizontal">
-                        <img src="./images/catanacomics 1.png"/>
-                        <div className="coluna">
-                            <h1>catanacomics</h1>
-                            <h2 className="claro maior">Catana</h2>
-                        </div>
-                </div>
+                <UserProfile 
+                    profImage="./images/catanacomics 1.png"
+                    profName="catanacomics"
+                    userName="Catana" />
+                    
                 <div className="barra horizontal">
                         <h2 className="bold claro">Sugestões para você</h2>
                         <h2 className="bold">Ver tudo</h2>
                 </div>
-                {toFollow.map(follow =>
-                <div className="contas barra horizontal">
-                    <div>
-                        <img src={follow.profImage}/>
-                        <div className="coluna">
-                            <h1>{follow.profName}</h1>
-                            <h2 className="claro">{follow.status}</h2>
-                        </div>
-                    </div>
-                    <h3 className="bold">Seguir</h3>
-                </div>
+                {toFollow.map(follow => <SugFollowers 
+                        profImage={follow.profImage}
+                        profName={follow.profName}
+                        status={follow.status} />
                 )}
                 <p className="espaco-rodape rodape">Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •
                     Termos • Localizações • Contas mais relevantes • Hashtags • 

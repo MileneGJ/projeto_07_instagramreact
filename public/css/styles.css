@@ -51,8 +51,7 @@ ion-icon {
 
 .pesquisar {
     background-color: #FAFAFA;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     width: 215px;
     height: 28px;
     border: 1px solid #DBDBDB;
@@ -122,6 +121,7 @@ strong {
     padding: 15px 0;
     box-sizing: border-box;
     position: relative;
+    overflow: hidden;
 }
 
 .stories ion-icon {
@@ -134,11 +134,19 @@ strong {
 }
 
 .stories>div {
+    width:66px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-left: 15px;
+}
+.stories h2{
+    width: 66px;
+    line-height: 15px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .molde-foto {
@@ -154,6 +162,7 @@ strong {
     position: absolute;
     top: 5px;
     left: 5px;
+    border-radius: 50px;
 }
 
 .foto-interior img {
@@ -274,6 +283,23 @@ video {
     transition: background-color 300ms;
 }
 
+.outline{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.fill{
+    position:absolute;
+    color:transparent;
+    font-size:19px;
+    top:1.5px;
+    left:1.5px;
+}
+.selecionado{
+    color: red;
+}
+
 /* FIM Conteúdo: Posts */
 
 
@@ -351,6 +377,9 @@ video {
 
 /* Layout para mobile quando a largura da tela for inferior a 614px */
 @media (max-width:614px) {
+    body{
+        display:block;
+    }
     .topo {
         display: none;
     }
@@ -384,11 +413,9 @@ video {
         background-color: transparent;
         border: none;
     }
-
-    .posts {
-        display: none;
+    .posts{
+        width:100%;
     }
-
     .posts>div {
         width: 100%;
         margin-top: 15px;
