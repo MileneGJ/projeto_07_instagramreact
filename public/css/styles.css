@@ -1,58 +1,62 @@
-body{
+body {
     background-color: #FAFAFA;
     font-family: 'Encode Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
 
 /* INICIO Topo da página */
 
-.topo-mobile{
-    display:none;
+.topo-mobile {
+    display: none;
 }
-.topo{
-    display:flex;
+
+.topo {
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height:54px;
-    width:100%;
-    border-bottom:1px solid #DBDBDB;
+    height: 54px;
+    width: 100%;
+    border-bottom: 1px solid #DBDBDB;
     background-color: #FFFFFF;
-    margin-bottom:34px;
-    position:fixed;
-    top:0;
-    left:0;
+    margin-bottom: 34px;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1;
 }
-ion-icon{
-font-size:22px;
+
+ion-icon {
+    font-size: 22px;
 }
+
 .topo div {
     display: flex;
 }
-.topo img{
-    border-left:1px solid #DBDBDB;
-    height:22px;
-    width:auto;
-    margin-left:10px;
+
+.topo img {
+    border-left: 1px solid #DBDBDB;
+    height: 22px;
+    width: auto;
+    margin-left: 10px;
     padding-left: 10px;
 }
-.icones{
-    width:160px;
+
+.icones {
+    width: 160px;
     justify-content: space-between;
 }
-.pesquisar{
-background-color: #FAFAFA;
-justify-content: center;
-align-items: center;
-width:215px;
-height:28px;
-border: 1px solid #DBDBDB;
-box-sizing: border-box;
-}
-.pesquisar p{
+
+.pesquisar {
+    background-color: #FAFAFA;
+    justify-content: center;
+    align-items: center;
+    width: 215px;
+    height: 28px;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
     font-size: 12px;
     color: #979797;
 }
@@ -63,327 +67,349 @@ box-sizing: border-box;
 
 /* INICIO Conteúdo + barra lateral */
 
-h1{
+h1 {
     font-size: 14px;
-    color:#262626;
+    color: #262626;
     font-weight: bold;
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
-h2{
+
+h2 {
     font-size: 12px;
-    color:#262626;
+    color: #262626;
 }
-h3{
+
+h3 {
     font-size: 12px;
-    color:#139EF2;
+    color: #139EF2;
 }
-.claro{
-    color:#8E8E8E;
+
+.claro {
+    color: #8E8E8E;
 }
-.maior{
+
+.maior {
     font-size: 14px;
 }
-.bold{
+
+.bold {
     font-weight: bold;
 }
-strong{
-    font-weight:bold;
+
+strong {
+    font-weight: bold;
 }
-.horizontal{
+
+.horizontal {
     display: flex;
 }
-.container{
-    margin-top:88px;
-    width:935px;
+
+.container {
+    margin-top: 88px;
+    width: 935px;
     justify-content: center;
-    position:relative;
+    position: relative;
 }
 
 
 /* INICIO Conteúdo: Stories */
 
-.stories-mobile{
-    display:none;
-}
-.stories{
-    width:614px;
+.stories {
+    width: 614px;
     height: auto;
     background-color: #FFFFFF;
-    border:1px solid #DBDBDB;
+    border: 1px solid #DBDBDB;
     padding: 15px 0;
     box-sizing: border-box;
-    position:relative;
+    position: relative;
 }
-.stories ion-icon{
-    color:#FFFFFF;
-    position:absolute;
-    right:9px;
-    top:45px;
+
+.stories ion-icon {
+    color: #FFFFFF;
+    position: absolute;
+    right: 9px;
+    top: 45px;
     font-size: 26px;
-    filter: drop-shadow( 2px 2px 1px rgba(0, 0, 0, .3));
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, .3));
 }
-.stories > div{
-    display:flex;
-    flex-direction:column;
+
+.stories>div {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left:15px;
+    margin-left: 15px;
 }
-.molde-foto{
-    position:relative;
+
+.molde-foto {
+    position: relative;
 }
-.molde-foto img{
-width:66px;
-height:66px;
+
+.molde-foto img {
+    width: 66px;
+    height: 66px;
 }
-.foto-interior{
-    position:absolute;
-    top:5px;
-    left:5px;
+
+.foto-interior {
+    position: absolute;
+    top: 5px;
+    left: 5px;
 }
-.foto-interior img{
-    width:56px;
-    height:56px;
+
+.foto-interior img {
+    width: 56px;
+    height: 56px;
 }
 
 /* FIM Conteúdo: Stories */
 
 
 /* INICIO Conteúdo: Posts */
-video{
-    width:100%;
+video {
+    width: 100%;
 }
-.posts-mobile{
-    display:none;
-}
-.posts > div{
-    width:614px;
-    height: auto;
+
+.posts>div {
+    width: 614px;
     background-color: #FFFFFF;
-    border:1px solid #DBDBDB;
+    border: 1px solid #DBDBDB;
     padding: 15px 0;
     box-sizing: border-box;
     margin-top: 24px;
     margin-bottom: 36px;
 }
-.posts h2{
-    margin-left:15px;
+
+.posts h2 {
+    margin-left: 15px;
 }
-.barra{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.barra h1{
-    margin-left:15px;
-}
-.barra h2{
-    margin-left:15px;
-}
-.barra img{
-    width:32px;
-    height:32px;
-}
-.barra > div {
+
+.barra {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.acima{
-    padding:0 15px 15px 15px;
+
+.barra h1 {
+    margin-left: 15px;
 }
-.abaixo{
-    padding:15px;
+
+.barra h2 {
+    margin-left: 15px;
 }
-.icones2{
-    width:100px;
+
+.barra img {
+    width: 32px;
+    height: 32px;
 }
-.curtidas{
-    display:flex;
+
+.barra>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acima {
+    padding: 0 15px 15px 15px;
+}
+
+.abaixo {
+    padding: 15px;
+}
+
+.icones2 {
+    width: 100px;
+}
+
+.curtidas {
+    display: flex;
     align-items: center;
     padding: 0 15px;
-    margin-bottom:6px;
+    margin-bottom: 6px;
 }
-.curtidas img{
-width: 20px;
-height: 20px;
+
+.curtidas img {
+    width: 20px;
+    height: 20px;
 }
-.curtidas p{
+
+.curtidas p {
     font-size: 14px;
     color: #000000;
-    margin-left:5px;
+    margin-left: 5px;
 }
-.comentario{
+
+.comentario {
     margin: 6px 0;
 }
-.comentario ion-icon{
+
+.comentario ion-icon {
     font-size: 16px;
 }
-.add-comentario{
-    padding:0 15px;
+
+.add-comentario {
+    padding: 0 15px;
     justify-content: flex-start;
 }
-.add-comentario input{
-    width:200px;
+
+.add-comentario input {
+    width: 200px;
     font-size: 14px;
-    color:#8E8E8E;
-    margin-left:15px;
-    border:none;
+    color: #8E8E8E;
+    margin-left: 15px;
+    border: none;
 }
-.add-comentario button{
+
+.add-comentario button {
     font-size: 12px;
-    color:#133964;
+    color: #133964;
     margin-left: 15px;
     background-color: #B2DFFC;
-    border:none;
-    padding:5px;
+    border: none;
+    padding: 5px;
     box-shadow: none;
 }
-.add-comentario button:hover{
+
+.add-comentario button:hover {
     background-color: #0095F6;
     transition: background-color 300ms;
 }
+
 /* FIM Conteúdo: Posts */
 
 
 
 /* INICIO Barra lateral */
 
-.sidebar-frame{
+.sidebar-frame {
     width: 323px;
 }
-.sidebar{
-    display:flex;
+
+.sidebar {
+    display: flex;
     flex-direction: column;
     width: 293px;
     margin-left: 322px;
-    position:fixed;
+    position: fixed;
     left: 50%;
-    top:88px;  
+    top: 88px;
     transform: translateX(-50%);
 }
-.coluna{
-    display:flex;
+
+.coluna {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.perfil{
+
+.perfil {
     align-items: center;
-    margin-bottom:25px;
+    margin-bottom: 25px;
 }
-.perfil div{
-    margin-left:15px;
+
+.perfil div {
+    margin-left: 15px;
 }
-.contas{
-    margin-top:18px;
+
+.contas {
+    margin-top: 18px;
 }
-.bottombar-mobile{
-    display:none;
+
+.bottombar-mobile {
+    display: none;
 }
-.rodape{
+
+.rodape {
     font-size: 11px;
-    color:#C7C7C7;
-    margin-bottom:18px;
-    width:293px;
-    padding-right:30px;
+    color: #C7C7C7;
+    margin-bottom: 18px;
+    width: 293px;
+    padding-right: 30px;
     box-sizing: border-box;
     line-height: 15px;
 }
-.espaco-rodape{
-    margin-top:35px;
+
+.espaco-rodape {
+    margin-top: 35px;
 }
+
 /* FIM Barra lateral */
 
 /* FIM Conteúdo + barra lateral */
 
 
 /* Layout sem sidebar quando a largura da tela for menor que 935px */
-@media (max-width:935px){
-    .sidebar{
-        display:none;
+@media (max-width:935px) {
+    .sidebar {
+        display: none;
     }
-    .sidebar-frame{
-        display:none;
+
+    .sidebar-frame {
+        display: none;
     }
 }
 
 
 /* Layout para mobile quando a largura da tela for inferior a 614px */
-@media (max-width:614px){
-    .topo{
-        display:none;
+@media (max-width:614px) {
+    .topo {
+        display: none;
     }
-    .topo-mobile{
-        display:flex;
+
+    .topo-mobile {
+        display: flex;
         justify-content: space-around;
         align-items: center;
-        height:54px;
-        width:100%;
-        border-bottom:1px solid #DBDBDB;
+        height: 54px;
+        width: 100%;
+        border-bottom: 1px solid #DBDBDB;
         background-color: #FFFFFF;
-        position:fixed;
-        top:0;
-        left:0;
+        position: fixed;
+        top: 0;
+        left: 0;
         z-index: 1;
     }
-    .container{
-        margin-top:69px;
-        width:100%;
+
+    .container {
+        margin-top: 69px;
+        width: 100%;
         justify-content: flex-start;
     }
-    .container > div{
-        width:100%
+
+    .container>div {
+        width: 100%
     }
-    .stories{
-        display:none;
+
+    .stories {
+        width: 100%;
+        background-color: transparent;
+        border: none;
     }
-    .stories-mobile{
-        width:100%;
-        display:flex;
-        padding: 15px 0;
-        box-sizing: border-box;
+
+    .posts {
+        display: none;
     }
-    .stories-mobile > div{
-        display:flex;
-        flex-direction:column;
-        justify-content: center;
-        align-items: center;
-        margin-left:15px;
-    }
-    .posts{
-        display:none;
-    }
-    .posts-mobile{
-        display:inline;
-    }
-     .posts-mobile h2 {
-    margin-left: 15px;
-  }
-    .posts-mobile > div{
-        width:100%;
-        height: auto;
-        background-color: #FFFFFF;
-        border:1px solid #DBDBDB;
-        padding: 15px 0;
-        box-sizing: border-box;
+
+    .posts>div {
+        width: 100%;
         margin-top: 15px;
         margin-bottom: 45px;
     }
-    .posts-mobile > div > img{
-        width:100%;
-        height:auto;
+
+    .posts>div>img {
+        width: 100%;
     }
-    .bottombar-mobile{
+
+    .bottombar-mobile {
         background-color: #FFFFFF;
-        border:1px solid #DBDBDB;
-        height:54px;
+        border: 1px solid #DBDBDB;
+        height: 54px;
         padding: 0 15px;
-        box-sizing:border-box;
-        display:flex;
+        box-sizing: border-box;
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        position:fixed;
-        bottom:0;
-        left:0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
     }
 }
