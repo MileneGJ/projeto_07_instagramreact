@@ -1,9 +1,12 @@
 import React from "react";
 
 export default function Posts() {
+
+    //Criando manualmente para cada post uma variável de mudança de cor do botão 'Like'
     const [useColor1, setColor1] = React.useState("fill");
     const [useColor2, setColor2] = React.useState("fill");
     const [useColor3, setColor3] = React.useState("fill");
+
     const infosPost = [{
         userImage: "./images/catanacomics 1.png",
         profImage: "./images/meowed 1.png",
@@ -67,21 +70,36 @@ export default function Posts() {
     }
     ]
 
+    function Comment (props) {
+        return (                
+        <div className="comentario curtidas barra">
+            <div>
+                <img src={props.ProfImage} alt="" />
+                <p><strong>{props.ProfName}</strong> {props.Text}</p>
+            </div>
+            <ion-icon name="heart-outline"></ion-icon>
+        </div>)
+    }
+
     function Post(props) {
+
+        //Criando conteúdo de post a depender do tipo de mídia (imagem ou vídeo)
         let postContent;
         if (props.type === "image") {
             postContent = (
-                <img onClick={() => giveLike(props.link1)} src={props.link1} alt="" />
+                <img onClick={() => giveLike(props.link1,false)} src={props.link1} alt="" />
             )
         } else if (props.type === "video") {
             postContent = (
-                <video onClick={() => giveLike(props.link1)} controls autoPlay muted>
+                <video onClick={() => giveLike(props.link1,false)} controls autoPlay muted>
                     <source src={props.link1} type="video/mp4" />
                     <source src={props.link2} type="video/ogg" />
                     Seu navegador não suporta vídeos.
                 </video>
             )
         }
+
+
         return (
             <div>
                 <div className="barra acima">
@@ -97,9 +115,9 @@ export default function Posts() {
                 <div className="barra abaixo">
                     <div className="icones2">
                         <div className="outline">
-                            <ion-icon onClick={() => giveLike(props.link1)} name="heart-outline"></ion-icon>
+                            <ion-icon onClick={() => giveLike(props.link1, true)} name="heart-outline"></ion-icon>
                             <div>
-                                <ion-icon class={props.classIcon} onClick={() => giveLike(props.link1)} name="heart"></ion-icon>
+                                <ion-icon class={props.classIcon} onClick={() => giveLike(props.link1, true)} name="heart"></ion-icon>
                             </div> 
                         </div>
                         <ion-icon name="chatbubble-outline"></ion-icon>
@@ -117,13 +135,11 @@ export default function Posts() {
                     <p><strong>{props.profName}</strong> {props.description}</p>
                 </div>
                 <h2 className="maior claro">Ver todos os {props.totalComments} comentários</h2>
-                <div className="comentario curtidas barra">
-                    <div>
-                        <img src={props.commentsProfImage} alt="" />
-                        <p><strong>{props.commentsProfName}</strong> {props.commentsText}</p>
-                    </div>
-                    <ion-icon name="heart-outline"></ion-icon>
-                </div>
+                <Comment 
+                profImage={props.commentsProfImage}
+                profName={props.commentsProfName}
+                text={props.commentsText}
+                />
                 <div className="add-comentario barra">
                     <div>
                         <img src={props.userImage} alt="" />
@@ -135,37 +151,29 @@ export default function Posts() {
         )
     }
 
-    function giveLike (link) {
+    //Ação de dar 'Like' a depender do post clicado
+    function giveLike (link,toggle) {
         if(link==="./images/gato-telefone 1.png"){
             if(useColor1==="fill"){
                 setColor1("fill selecionado");
-            }else{
+            }else if(toggle){
             setColor1("fill");
             }
         }
         if(link==="./images/dog 1.png"){
             if(useColor2==="fill"){
                 setColor2("fill selecionado");
-            }else{
+            }else if(toggle){
             setColor2("fill");
             }
         }
         if(link==="./images/video.mp4"){
             if(useColor3==="fill"){
                 setColor3("fill selecionado");
-            }else{
+            }else if(toggle){
             setColor3("fill");
             }
         }
-        /*const selected = infosPost.filter(post => post.link1===link);
-        if(selected[0].classIcon === "fill"){
-            selected[0].classIcon = prompt("Mude a classe");
-            setColor("fill selecionado");
-            alert("Deu like");
-        } else {
-            selected[0].classIcon = "fill";
-            setColor("fill");
-        }*/
     }
 
     return (
