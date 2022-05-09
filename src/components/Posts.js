@@ -70,17 +70,6 @@ export default function Posts() {
     }
     ]
 
-    function Comment (props) {
-        return (                
-        <div className="comentario curtidas barra">
-            <div>
-                <img src={props.ProfImage} alt="" />
-                <p><strong>{props.ProfName}</strong> {props.Text}</p>
-            </div>
-            <ion-icon name="heart-outline"></ion-icon>
-        </div>)
-    }
-
     function Post(props) {
 
         //Criando conteúdo de post a depender do tipo de mídia (imagem ou vídeo)
@@ -99,6 +88,7 @@ export default function Posts() {
             )
         }
 
+        
 
         return (
             <div>
@@ -135,11 +125,13 @@ export default function Posts() {
                     <p><strong>{props.profName}</strong> {props.description}</p>
                 </div>
                 <h2 className="maior claro">Ver todos os {props.totalComments} comentários</h2>
-                <Comment 
-                profImage={props.commentsProfImage}
-                profName={props.commentsProfName}
-                text={props.commentsText}
-                />
+                <div className="comentario curtidas barra">
+                    <div>
+                        <img src={props.commentProfImage} alt="" />
+                        <p><strong>{props.commentProfName}</strong> {props.commentText}</p>
+                    </div>
+                    <ion-icon name="heart-outline"></ion-icon>
+                </div>
                 <div className="add-comentario barra">
                     <div>
                         <img src={props.userImage} alt="" />
@@ -191,10 +183,10 @@ export default function Posts() {
                     likedProfImage={post.liked.profImage}
                     likedProfName={post.liked.profName}
                     likedTotal={post.liked.total}
-                    totalComments={post.totalComments}
-                    commentsProfImage={post.comments.profImage}
-                    commentsProfName={post.comments.profName}
-                    commentsText={post.comments.text} />
+                    totalComments={post.totalComments} 
+                    commentProfImage={post.comments.profImage}
+                    commentProfName={post.comments.profName}
+                    commentText={post.comments.text} />
             )}
         </div>
     );
